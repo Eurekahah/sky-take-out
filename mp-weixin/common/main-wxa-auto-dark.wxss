@@ -1,0 +1,172 @@
+/* 
+此文件为开发者工具生成，生成时间: 6/1/2025, 8:58:30 PM
+使用方法：
+在 main.wxss 文件末尾引入样式
+```
+@import "./main-wxa-auto-dark.wxss";
+```
+ */
+
+@media (prefers-color-scheme: dark) {
+    page {
+        background-color: rgb(28, 28, 32);
+    }
+
+    .uni-hello-text {
+        color: rgb(122, 126, 131);
+    }
+
+    .uni-hello-addfile {
+        background: rgb(17, 17, 17);
+        color: rgb(122, 122, 122);
+    }
+
+    .box {
+        background-color: rgb(17, 17, 17);
+    }
+
+    .tag {
+        background: rgb(17, 31, 40);
+        color: rgb(209, 209, 209);
+    }
+
+    .recent_orders .order_lists .date_type .time {
+        color: rgb(209, 209, 209);
+    }
+
+    .recent_orders .order_lists .date_type .type {
+        color: rgb(149, 149, 149);
+    }
+
+    .recent_orders .order_lists .date_type .status {
+        color: rgb(145, 56, 0);
+    }
+
+    .recent_orders .order_lists .food_num .food {
+        color: rgb(149, 149, 149);
+    }
+
+    .recent_orders .order_lists .numAndAum {
+        color: rgb(149, 149, 149);
+        background: rgba(17, 17, 17, 0.76);
+    }
+
+    .recent_orders .order_lists .numAndAum view:first-child text {
+        color: rgb(209, 209, 209);
+    }
+
+    .recent_orders .order_lists .numAndAum view:last-child {
+        color: rgb(149, 149, 149);
+    }
+
+    .againBtn .new_btn {
+        border-color: rgb(37, 36, 36);
+        background-color: rgb(17, 17, 17);
+        color: rgb(209, 209, 209);
+    }
+
+    .againBtn .btn {
+        background: rgb(86, 45, 0);
+    }
+
+    .popup-content {
+        background-color: rgb(17, 17, 17);
+    }
+
+    .popupBox .popupTitle {
+        background: rgb(28, 22, 10);
+    }
+
+    .popupBox .popupTitle text {
+        color: rgb(145, 56, 0);
+    }
+
+    .popupBox .popupCon .popupBtn {
+        border-bottom: rgb(0, 0, 0);
+    }
+
+    .popupBox .popupCon .popupList > view {
+        border-bottom: rgb(0, 0, 0);
+    }
+
+    .popupBox .popupSet {
+        background: rgb(24, 24, 24);
+        color: rgb(149, 149, 149);
+    }
+
+    .popupBox .popupSet view:last-child {
+        color: rgb(209, 209, 209);
+    }
+
+    .closePopup {
+        background: rgb(17, 17, 17);
+    }
+
+    .colseShop {
+        background: rgba(0, 0, 0, 0);
+    }
+
+    .colseShop .shop {
+        background: rgba(255, 255, 255, 0.63);
+        color: rgb(17, 17, 17);
+    }
+
+    .phoneCon .popupBox {
+        color: rgb(209, 209, 209);
+    }
+
+    .phoneCon .popupBox .popup-content > view {
+        color: rgb(209, 209, 209);
+    }
+
+    .phoneCon .popupBox .popup-content > view:first-child {
+        border-bottom: rgb(0, 0, 0);
+        color: rgb(149, 149, 149);
+    }
+
+    .phoneCon .closePopup {
+        border-top: rgb(0, 0, 0);
+    }
+
+    .comPopupBox .popup-content .btn {
+        border-top: rgb(0, 0, 0);
+    }
+
+    .comPopupBox .popup-content .btn > view:first-child {
+        border-right: rgb(0, 0, 0);
+    }
+
+    .comPopupBox .popup-content .btn > view:last-child {
+        color: rgb(145, 56, 0);
+    }
+
+    .tag {
+        background: rgb(17, 31, 40);
+        color: rgb(209, 209, 209);
+    }
+
+    .tag2 {
+        background: rgb(26, 22, 5);
+    }
+
+    .tag3 {
+        background: rgb(4, 25, 21);
+    }
+
+    .payBox .wx-checkbox-input-checked, .payBox .wx-radio-input-checked,
+    .payBox .wx-switch-input-checked {
+        background-color: rgb(86, 45, 0) !important;
+        border-color: rgb(86, 45, 0) !important;
+        color: rgb(255, 255, 255) !important;
+    }
+
+    radio .wx-radio-input.wx-radio-input-checked::before {
+        color: rgb(255, 255, 255);
+        border: rgb(0, 0, 0);
+        background: rgb(86, 45, 0);
+    }
+
+    .dish_dishFlavor {
+        color: rgb(149, 149, 149);
+    }
+}

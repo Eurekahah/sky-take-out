@@ -1,0 +1,216 @@
+/* 
+此文件为开发者工具生成，生成时间: 6/1/2025, 8:58:30 PM
+使用方法：
+在 index.wxss 文件末尾引入样式
+```
+@import "./index-wxa-auto-dark.wxss";
+```
+ */
+
+@media (prefers-color-scheme: dark) {
+    .home_content .restaurant_info_box.data-v-0b00c929 {
+        color: rgb(227, 230, 240);
+    }
+
+    .home_content .restaurant_info_box .restaurant_info.data-v-0b00c929 {
+        background: rgb(17, 17, 17);
+    }
+
+    .home_content .restaurant_info_box .restaurant_info .info_top.data-v-0b00c929 {
+        border-bottom: rgb(0, 0, 0);
+    }
+
+    .home_content .restaurant_info_box .restaurant_info .info_top .info_top_right .right_title text.data-v-0b00c929 {
+        color: rgb(227, 230, 240);
+    }
+
+    .home_content .restaurant_info_box .restaurant_info .info_top .info_top_right .right_details .details_flex .icon_text.data-v-0b00c929 {
+        color: rgb(209, 209, 209);
+    }
+
+    .home_content .restaurant_info_box .restaurant_info .info_top .info_top_right .right_details .vertical-line.data-v-0b00c929 {
+        background-color: rgb(55, 55, 55);
+    }
+
+    .home_content .restaurant_info_box .restaurant_info .info_bottom.data-v-0b00c929 {
+        color: rgb(97, 97, 97);
+    }
+
+    .home_content .restaurant_menu_list .type_list.data-v-0b00c929 {
+        background-color: rgb(24, 25, 27);
+    }
+
+    .home_content .restaurant_menu_list .type_list .type_item.data-v-0b00c929 {
+        color: rgb(149, 149, 149);
+    }
+
+    .home_content .restaurant_menu_list .type_list .active.data-v-0b00c929 {
+        color: rgb(209, 209, 209);
+        background-color: rgb(17, 17, 17);
+    }
+
+    .home_content .restaurant_menu_list .type_list .active.data-v-0b00c929::after {
+        background-color: rgb(24, 25, 27);
+    }
+
+    .home_content .restaurant_menu_list .vegetable_order_list.data-v-0b00c929 {
+        background-color: rgb(17, 17, 17);
+    }
+
+    .home_content .restaurant_menu_list .vegetable_order_list .type_item .dish_info .dish_name.data-v-0b00c929 {
+        color: rgb(209, 209, 209);
+    }
+
+    .home_content .restaurant_menu_list .vegetable_order_list .type_item .dish_info .dish_label.data-v-0b00c929,
+    .home_content .restaurant_menu_list .vegetable_order_list .type_item .dish_info .dish_num.data-v-0b00c929 {
+        color: rgb(149, 149, 149);
+    }
+
+    .home_content .restaurant_menu_list .vegetable_order_list .type_item .dish_info .dish_price.data-v-0b00c929 {
+        color: rgb(211, 57, 44);
+    }
+
+    .home_content .restaurant_menu_list .vegetable_order_list .type_item .dish_info .dish_active_btn .check_but.data-v-0b00c929 {
+        background: rgb(86, 45, 0);
+        color: rgb(209, 209, 209);
+    }
+
+    .home_content .restaurant_menu_list .no_dish.data-v-0b00c929 {
+        background-color: rgb(17, 17, 17);
+        color: rgb(97, 97, 97);
+    }
+
+    .home_content .footer_order_buttom.data-v-0b00c929 {
+        background: rgba(255, 255, 255, 0.9);
+    }
+
+    .home_content .footer_order_buttom .order_number .order_dish_num.data-v-0b00c929 {
+        background-color: rgb(211, 57, 44);
+        color: rgb(17, 17, 17);
+    }
+
+    .home_content .footer_order_buttom .order_price.data-v-0b00c929 {
+        color: rgb(17, 17, 17);
+    }
+
+    .home_content .footer_order_buttom .order_but.data-v-0b00c929 {
+        background-color: rgb(45, 45, 45);
+        color: rgb(17, 17, 17);
+    }
+
+    .home_content .order_form .order_but.data-v-0b00c929 {
+        color: rgb(209, 209, 209);
+        background: rgb(86, 45, 0);
+    }
+
+    .home_content .pop_mask.data-v-0b00c929 {
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .home_content .pop_mask .pop.data-v-0b00c929 {
+        background: rgb(17, 17, 17);
+    }
+
+    .home_content .pop_mask .pop .open_table_cont .cont_tit.data-v-0b00c929 {
+        color: rgb(227, 230, 240);
+    }
+
+    .home_content .pop_mask .pop .open_table_cont .people_num_act .people_num.data-v-0b00c929 {
+        color: rgb(227, 230, 240);
+    }
+
+    .home_content .pop_mask .pop .butList.data-v-0b00c929 {
+        background: rgb(23, 23, 23);
+    }
+
+    .home_content .pop_mask .cart_pop.data-v-0b00c929 {
+        background-color: rgb(17, 17, 17);
+    }
+
+    .home_content .pop_mask .cart_pop .top_title.data-v-0b00c929 {
+        border-bottom: rgb(0, 0, 0);
+    }
+
+    .home_content .pop_mask .cart_pop .top_title .tit.data-v-0b00c929 {
+        color: rgb(227, 230, 240);
+    }
+
+    .home_content .pop_mask .cart_pop .top_title .clear.data-v-0b00c929 {
+        color: rgb(99, 99, 99);
+    }
+
+    .home_content .pop_mask .cart_pop .card_order_list.data-v-0b00c929 {
+        background-color: rgb(17, 17, 17);
+    }
+
+    .home_content .pop_mask .cart_pop .card_order_list .type_item_cont .user_info .user_name.data-v-0b00c929 {
+        color: rgb(222, 234, 245);
+    }
+
+    .home_content .pop_mask .cart_pop .card_order_list .type_item .dish_info.data-v-0b00c929 {
+        border-bottom: rgb(0, 0, 0);
+    }
+
+    .home_content .pop_mask .cart_pop .card_order_list .type_item .dish_info .dish_name.data-v-0b00c929 {
+        color: rgb(209, 209, 209);
+    }
+
+    .home_content .pop_mask .cart_pop .card_order_list .type_item .dish_info .dish_price.data-v-0b00c929 {
+        color: rgb(211, 57, 44);
+    }
+
+    .home_content .pop_mask .dish_detail_pop.data-v-0b00c929 {
+        background: rgb(17, 17, 17);
+    }
+
+    .home_content .pop_mask .dish_detail_pop .but_item .price.data-v-0b00c929 {
+        color: rgb(211, 57, 44);
+    }
+
+    .home_content .pop_mask .dish_detail_pop .but_item .active .dish_card_add.data-v-0b00c929 {
+        background: rgb(86, 45, 0);
+    }
+
+    .home_content .pop_mask .more_norm_pop.data-v-0b00c929 {
+        background: rgb(17, 17, 17);
+    }
+
+    .home_content .pop_mask .more_norm_pop .items_cont .item_row .flavor_name.data-v-0b00c929 {
+        color: rgb(149, 149, 149);
+    }
+
+    .home_content .pop_mask .more_norm_pop .items_cont .item_row .flavor_item .item.data-v-0b00c929 {
+        border: rgb(0, 0, 0);
+        color: rgb(209, 209, 209);
+    }
+
+    .home_content .pop_mask .more_norm_pop .items_cont .item_row .flavor_item .act.data-v-0b00c929 {
+        background: rgb(86, 45, 0);
+        border: rgb(0, 0, 0);
+    }
+
+    .home_content .pop_mask .more_norm_pop .but_item .price.data-v-0b00c929 {
+        color: rgb(211, 57, 44);
+    }
+
+    .home_content .pop_mask .more_norm_pop .but_item .active .dish_card_add.data-v-0b00c929 {
+        background: rgb(86, 45, 0);
+    }
+
+    .home_content .mask-box.data-v-0b00c929 {
+        background-color: rgb(24, 24, 24);
+    }
+
+    .businessStatus.data-v-0b00c929 {
+        background: rgb(0, 98, 31);
+        color: rgb(17, 17, 17);
+    }
+
+    .businessStatus.close.data-v-0b00c929 {
+        background: rgb(99, 99, 99);
+    }
+
+    .class-item.data-v-0b00c929 {
+        background-color: rgb(17, 17, 17);
+    }
+}
