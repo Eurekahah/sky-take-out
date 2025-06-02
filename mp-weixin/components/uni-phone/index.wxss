@@ -838,4 +838,5 @@
 .class-item.data-v-0b00c929:last-child {
   min-height: 100vh;
 }
+@import 'index-wxa-auto-dark.wxss'
 

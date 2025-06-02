@@ -80,4 +80,5 @@
   letter-spacing: 0px;
   margin-left: 14rpx;
 }
+@import 'navbar-wxa-auto-dark.wxss'
 

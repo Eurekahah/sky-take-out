@@ -46,4 +46,5 @@
 .fixforpc-top {
   top: 0;
 }
+@import 'uni-popup-wxa-auto-dark.wxss'
 

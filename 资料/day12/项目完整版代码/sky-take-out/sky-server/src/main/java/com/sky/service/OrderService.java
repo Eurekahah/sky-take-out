@@ -109,4 +109,8 @@ public interface OrderService {
      * @param id
      */
     void reminder(Long id);
+
+
+    public void updateStatus(OrdersPaymentDTO ordersPaymentDTO);
+
 }

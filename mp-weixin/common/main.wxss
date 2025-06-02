@@ -485,4 +485,5 @@ radio .wx-radio-input.wx-radio-input-checked::before {
   font-size: 20rpx;
   color: #666;
 }
+@import 'main-wxa-auto-dark.wxss'
 

@@ -211,7 +211,7 @@ public class OrderServiceImpl implements OrderService {
         JSONObject jsonObject = weChatPayUtil.pay(
                 ordersPaymentDTO.getOrderNumber(), //商户订单号
                 new BigDecimal(0.01), //支付金额，单位 元
-                "苍穹外卖订单", //商品描述
+                "同济外卖订单", //商品描述
                 user.getOpenid() //微信用户的openid
         );
 
@@ -342,11 +342,11 @@ public class OrderServiceImpl implements OrderService {
         // 订单处于待接单状态下取消，需要进行退款
         if (ordersDB.getStatus().equals(Orders.TO_BE_CONFIRMED)) {
             //调用微信支付退款接口
-            weChatPayUtil.refund(
-                    ordersDB.getNumber(), //商户订单号
-                    ordersDB.getNumber(), //商户退款单号
-                    new BigDecimal(0.01),//退款金额，单位 元
-                    new BigDecimal(0.01));//原订单金额
+//            weChatPayUtil.refund(
+//                    ordersDB.getNumber(), //商户订单号
+//                    ordersDB.getNumber(), //商户退款单号
+//                    new BigDecimal(0.01),//退款金额，单位 元
+//                    new BigDecimal(0.01));//原订单金额
 
             //支付状态修改为 退款
             orders.setPayStatus(Orders.REFUND);
@@ -494,13 +494,13 @@ public class OrderServiceImpl implements OrderService {
         //支付状态
         Integer payStatus = ordersDB.getPayStatus();
         if (payStatus == Orders.PAID) {
-            //用户已支付，需要退款
-            String refund = weChatPayUtil.refund(
-                    ordersDB.getNumber(),
-                    ordersDB.getNumber(),
-                    new BigDecimal(0.01),
-                    new BigDecimal(0.01));
-            log.info("申请退款：{}", refund);
+//            //用户已支付，需要退款
+//            String refund = weChatPayUtil.refund(
+//                    ordersDB.getNumber(),
+//                    ordersDB.getNumber(),
+//                    new BigDecimal(0.01),
+//                    new BigDecimal(0.01));
+//            log.info("申请退款：{}", refund);
         }
 
         // 拒单需要退款，根据订单id更新订单状态、拒单原因、取消时间
@@ -526,12 +526,12 @@ public class OrderServiceImpl implements OrderService {
         Integer payStatus = ordersDB.getPayStatus();
         if (payStatus == 1) {
             //用户已支付，需要退款
-            String refund = weChatPayUtil.refund(
-                    ordersDB.getNumber(),
-                    ordersDB.getNumber(),
-                    new BigDecimal(0.01),
-                    new BigDecimal(0.01));
-            log.info("申请退款：{}", refund);
+//            String refund = weChatPayUtil.refund(
+//                    ordersDB.getNumber(),
+//                    ordersDB.getNumber(),
+//                    new BigDecimal(0.01),
+//                    new BigDecimal(0.01));
+//            log.info("申请退款：{}", refund);
         }
 
         // 管理端取消订单需要退款，根据订单id更新订单状态、取消原因、取消时间
@@ -609,4 +609,14 @@ public class OrderServiceImpl implements OrderService {
         //通过websocket向客户端浏览器推送消息
         webSocketServer.sendToAllClient(JSON.toJSONString(map));
     }
+
+    @Override
+    public void updateStatus(OrdersPaymentDTO ordersPaymentDTO) {
+        Long currentId = BaseContext.getCurrentId();
+        Orders orders = orderMapper.getByNumberAndUserId(ordersPaymentDTO.getOrderNumber(), currentId);
+        orders.setStatus(Orders.TO_BE_CONFIRMED);
+        orders.setPayStatus(Orders.PAID);
+        orderMapper.update(orders);
+    }
+
 }
