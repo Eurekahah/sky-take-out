@@ -1,8 +1,7 @@
-package com.sky.test;
+package com.sky;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.connection.DataType;
 import org.springframework.data.redis.core.*;
 

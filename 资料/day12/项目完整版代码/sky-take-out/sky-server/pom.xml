@@ -115,6 +115,20 @@
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.jacoco</groupId>
+            <artifactId>jacoco-maven-plugin</artifactId>
+            <version>0.8.12</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-inline</artifactId>
+            <version>5.2.0</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -122,6 +136,48 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.12</version> <!-- 使用最新版本 -->
+                <configuration>
+                    <!-- 指定要包含的类路径 -->
+                    <includes>
+                        <include>com/sky/**</include>
+                    </includes>
+                    <!-- 排除一些不需要测试的类 -->
+                    <excludes>
+                        <exclude>com/sky/**/config/**</exclude>
+                        <exclude>com/sky/**/dto/**</exclude>
+                        <exclude>com/sky/**/vo/**</exclude>
+                        <exclude>com/sky/**/entity/**</exclude>
+                    </excludes>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>prepare-agent</goal> <!-- 启动覆盖率代理 -->
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>report</id>
+                        <phase>test</phase> <!-- 绑定到 test 阶段 -->
+                        <goals>
+                            <goal>report</goal> <!-- 生成报告 -->
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>report</id>
+                        <goals><goal>report</goal></goals>
+                        <configuration>
+                            <excludes>
+                                <exclude>**/model/*.class</exclude> <!-- 排除 model 包 -->
+                                <exclude>**/config/*.class</exclude>
+                            </excludes>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

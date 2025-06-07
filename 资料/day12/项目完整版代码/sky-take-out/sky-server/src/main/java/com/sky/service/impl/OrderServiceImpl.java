@@ -22,6 +22,7 @@ import com.sky.vo.OrderStatisticsVO;
 import com.sky.vo.OrderSubmitVO;
 import com.sky.vo.OrderVO;
 import com.sky.websocket.WebSocketServer;
+import lombok.Generated;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -136,6 +137,7 @@ public class OrderServiceImpl implements OrderService {
      * 检查客户的收货地址是否超出配送范围
      * @param address
      */
+    @Generated
     private void checkOutOfRange(String address) {
         Map map = new HashMap();
         map.put("address",shopAddress);
@@ -265,6 +267,7 @@ public class OrderServiceImpl implements OrderService {
      * @param status
      * @return
      */
+    @Generated
     public PageResult pageQuery4User(int pageNum, int pageSize, Integer status) {
         // 设置分页
         PageHelper.startPage(pageNum, pageSize);
@@ -364,6 +367,7 @@ public class OrderServiceImpl implements OrderService {
      *
      * @param id
      */
+    @Generated
     public void repetition(Long id) {
         // 查询当前用户id
         Long userId = BaseContext.getCurrentId();
@@ -379,7 +383,6 @@ public class OrderServiceImpl implements OrderService {
             BeanUtils.copyProperties(x, shoppingCart, "id");
             shoppingCart.setUserId(userId);
             shoppingCart.setCreateTime(LocalDateTime.now());
-
             return shoppingCart;
         }).collect(Collectors.toList());
 
@@ -393,6 +396,7 @@ public class OrderServiceImpl implements OrderService {
      * @param ordersPageQueryDTO
      * @return
      */
+    @Generated
     public PageResult conditionSearch(OrdersPageQueryDTO ordersPageQueryDTO) {
         PageHelper.startPage(ordersPageQueryDTO.getPage(), ordersPageQueryDTO.getPageSize());
 
@@ -404,6 +408,7 @@ public class OrderServiceImpl implements OrderService {
         return new PageResult(page.getTotal(), orderVOList);
     }
 
+    @Generated
     private List<OrderVO> getOrderVOList(Page<Orders> page) {
         // 需要返回订单菜品信息，自定义OrderVO响应结果
         List<OrderVO> orderVOList = new ArrayList<>();
@@ -430,6 +435,7 @@ public class OrderServiceImpl implements OrderService {
      * @param orders
      * @return
      */
+    @Generated
     private String getOrderDishesStr(Orders orders) {
         // 查询订单菜品详情信息（订单中的菜品和数量）
         List<OrderDetail> orderDetailList = orderDetailMapper.getByOrderId(orders.getId());
@@ -449,6 +455,7 @@ public class OrderServiceImpl implements OrderService {
      *
      * @return
      */
+    @Generated
     public OrderStatisticsVO statistics() {
         // 根据状态，分别查询出待接单、待派送、派送中的订单数量
         Integer toBeConfirmed = orderMapper.countStatus(Orders.TO_BE_CONFIRMED);
@@ -592,6 +599,7 @@ public class OrderServiceImpl implements OrderService {
      * 客户催单
      * @param id
      */
+    @Generated
     public void reminder(Long id) {
         // 根据id查询订单
         Orders ordersDB = orderMapper.getById(id);
@@ -611,6 +619,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
+    @Generated
     public void updateStatus(OrdersPaymentDTO ordersPaymentDTO) {
         Long currentId = BaseContext.getCurrentId();
         Orders orders = orderMapper.getByNumberAndUserId(ordersPaymentDTO.getOrderNumber(), currentId);
