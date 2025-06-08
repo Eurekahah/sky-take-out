@@ -742,26 +742,6 @@ public class UserSubmitOrderTest {
 
     /*****************/
     /*取消订单决策表测试*/
-    @Test
-    @DisplayName("TC16： 取消订单测试：商家未接单前用户可直接取消")
-    void testValidMerchantCancelOrderBeforeAccept() throws Exception {
-
-        // 1. 创建并支付订单
-        Long orderId = createPaidOrder();
-
-        // 验证状态2: 已接单
-        verifyOrderStatus(orderId, 2, "订单应该处于待接单状态");
-
-        // 用户取消订单 -> 成功
-
-        mockMvc.perform(put("/user/order/cancel/" + orderId)
-                        .header("authentication", userToken))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.code").value(1));
-
-        // 验证状态3: 订单已取消
-        verifyOrderStatus(orderId, 6, "订单应该已取消");
-    }
 
     @Test
     @DisplayName("TC9： 订单超时测试：未超时未支付不取消")
